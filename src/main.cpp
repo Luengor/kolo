@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
 
     std::string text = argc == 3 ? argv[2] : color;
 
+
     /// Print the text 
     // Change background color
     std::cout << "\033[48;2;"
@@ -60,4 +61,8 @@ int main(int argc, char* argv[])
 
         std::cout << "\n";
     }
+
+
+    /// Reset colors
+    std::cout << "\033[39m\033[49m";
 }
