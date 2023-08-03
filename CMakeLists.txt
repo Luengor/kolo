@@ -5,10 +5,7 @@ project(kolo)
 set(CMAKE_CXX_STANDARD 20)
 
 # Add all the source files
-file(GLOB SOURCES CMAKE_CONFIGURE_DEPENDS
-    "src/*.cpp"
-    "src/*.hpp"
-)
+set (SOURCES "src/main.cpp")
 
 # Add memory sanitizer
 add_compile_options(-fsanitize=address)
