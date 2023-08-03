@@ -28,9 +28,9 @@ int main(int argc, char* argv[])
     /// Print the text 
     // Change background color
     std::cout << "\033[48;2;"
-              << (int)std::stoi(color.substr(1, 2), nullptr, 16) << ";"
-              << (int)std::stoi(color.substr(3, 2), nullptr, 16) << ";"
-              << (int)std::stoi(color.substr(5, 2), nullptr, 16) << "m";
+              << std::stoi(color.substr(1, 2), nullptr, 16) << ";"
+              << std::stoi(color.substr(3, 2), nullptr, 16) << ";"
+              << std::stoi(color.substr(5, 2), nullptr, 16) << "m";
     
     // Change text color
     float lum = 0.2126 * std::stoi(color.substr(1, 2), nullptr, 16) +
@@ -50,14 +50,11 @@ int main(int argc, char* argv[])
         {
             for (int x = 0; x < text.length() + 4; x++)
                 std::cout << " ";
-
         }
 
         // If it is, print the line
         else
-        {
             std::cout << "  " << text << "  ";
-        }
 
         std::cout << "\n";
     }
